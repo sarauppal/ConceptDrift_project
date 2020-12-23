@@ -5,6 +5,6 @@ Thus, it’s inevitable that the performance of many machine learning models wil
 
 # Results 
 
-
+![plot](figs/results_table.png)
 
 This is a project exploring the   
