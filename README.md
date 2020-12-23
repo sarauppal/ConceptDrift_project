@@ -14,7 +14,9 @@ For MD3, we found that the number of standard deviations parameter, denoted as $
 
 Lastly, we would like to comment on the fact that not every input drift causes a deteriorating effect on accuracy of the model. As noted in [figure](figs/PSI_wo_intervention.png), the PSI keeps increasing but model's accuracy was going up. This means that with the PSI method, we might be retraining the model unnecessarily in some cases and this can also lead to a decrease in model accuracy as well. Similar behavior was observed in case of MD3 drift detection. In cases where the drift detection is done in an unsupervised manner, the detection of drift doesn't always co-relate with decreased model performance. It appears to be a warning which may result in model degradation. To mitigate this issue, we echo the idea proposed in Sethi et al [[1]](#1). The unsupervised drift detectors alert the system of a possible drift, but before retraining the model , degradation is confirmed by obtaining actual labels 
 Relying on unsupervised indicators alone isn't enough to indicate that model retraining is required. As appealing as unsupervised detectors seem, they aren't as concrete in terms of their detection as supervised detectors.
-
+```math
+SE = \frac{\sigma}{\sqrt{n}}
+```
 ## References
 <a id="1">[1]</a> 
 Tegjyot Singh Sethi, Mehmed Kantardzic (2017)
